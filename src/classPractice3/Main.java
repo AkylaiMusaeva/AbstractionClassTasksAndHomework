@@ -18,25 +18,35 @@ public class Main {
         EducationCenter school2=new School("Sapat","Bishkek",LocalDate.of(2009,4,30));
         EducationCenter university2=new University("Ala Too","Kg",LocalDate.of(2013,9,20));
         EducationCenter[]educationCenters={school1,college1,university1,school2,university2};
-
+        for(int i=0;i<educationCenters.length;i++){
+            System.out.println(educationCenters[i].getStudentsEducationCenterInfo());
+            educationCenters[i].getEducationCentersYear();
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        }
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
         Student student1=new Student("A","a",'F',LocalDate.of(2023,2,5),school1);
         Student student2=new Student("B","b",'M', LocalDate.of(2023,3,1),college1);
         Student student3=new Student("C","c",'F', LocalDate.of(2023,12,4),university1);
         Student student4=new Student("D","d",'M', LocalDate.of(2023,11,1),school2);
         Student student5=new Student("E","e",'F', LocalDate.of(2022,12,2),university2);
         Student[]students={student1,student2,student3,student4,student5};
-
-        for (Student s:students) {
-            System.out.println(s);
+        for(int i=0;i< students.length;i++){
+            System.out.println(students[i].toString());
+            students[i].getStudentYearOfStudying();
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`");
         }
-        System.out.print("Peaksoft тузулгонуно ");school1.getEducationCentersYear();
-        System.out.print("Secom тузулгонуно ");college1.getEducationCentersYear();
-        System.out.print("Bilimkana тузулгонуно ");university1.getEducationCentersYear();
-        System.out.print("Sapat тузулгонуно ");school2.getEducationCentersYear();
-        System.out.print("Ala Too тузулгонуно ");university2.getEducationCentersYear();
+
+
+
+
+
+
+
 
 
 
 
     }
+
+
 }

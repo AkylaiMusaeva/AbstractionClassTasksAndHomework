@@ -1,7 +1,6 @@
 package classPractice3;
 
 import java.time.LocalDate;
-
 public abstract class EducationCenter {
     private String name;
     private String locatedCountry;
@@ -13,7 +12,6 @@ public abstract class EducationCenter {
         this.foundationYear = foundationYear;
     }
     public EducationCenter(){
-
     }
 
     public String getName() {
@@ -41,11 +39,9 @@ public abstract class EducationCenter {
     }
 
 
-    public abstract void getStudentsEducationCenterInfo();
+    public abstract String getStudentsEducationCenterInfo();
 
     public abstract void getEducationCentersYear();
-
-
     @Override
     public String toString() {
         return "EducationCenter{" +

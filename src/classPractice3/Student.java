@@ -1,6 +1,7 @@
 package classPractice3;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Student {
     private String name;
@@ -52,14 +53,18 @@ public class Student {
     public void setEducationCenter(EducationCenter educationCenter) {
         this.educationCenter = educationCenter;
     }
+    public void getStudentYearOfStudying(){
+        Period diff=Period.between(getDateOfStart(),LocalDate.now());
+        System.out.println(diff.getYears()+" years,"+diff.getMonths()+" months,"+diff.getDays()+" days.");
+    }
 
     @Override
     public String toString() {
         return "name= " + name +','+
                 "surname= " + surname +','+
                 "gender=" + gender +','+
-                "dateOfStart=" + dateOfStart +','+
-                "educationCenter=" + educationCenter +
-                '\n';
+                "studying education center is " + educationCenter.getName() +','+
+                "dateOfStart=" + dateOfStart +',';
+
     }
 }

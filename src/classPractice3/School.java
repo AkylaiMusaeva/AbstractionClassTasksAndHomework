@@ -1,5 +1,6 @@
 package classPractice3;
 
+import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -12,17 +13,15 @@ public class School extends EducationCenter{
 
     }
 
-    @Override
-    public void getStudentsEducationCenterInfo() {
-        String string = toString();
-        System.out.println(string);
-    }
 
+    @Override
+    public String getStudentsEducationCenterInfo() {
+        return toString();
+    }
     @Override
     public void getEducationCentersYear() {
         Period dif=Period.between(getFoundationYear(),LocalDate.now());
-        System.out.println(dif.getYears()+" years,"+ dif.getMonths()+" months,"+ dif.getDays()+" days");
-
+        System.out.println(getName()+" бул окуу жай тузулгонуно "+dif.getYears()+" years,"+ dif.getMonths()+" months,"+ dif.getDays()+" days");
 
 
 
