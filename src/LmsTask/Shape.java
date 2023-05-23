@@ -19,7 +19,6 @@ public abstract class Shape {
         this.c=c;
         this.d=d;
     }
-
     public Shape(){
     }
 
@@ -51,5 +50,6 @@ public abstract class Shape {
         return d;
     }
     public abstract void getPerimeter();
+
 
 }
